@@ -1,0 +1,16 @@
+def func1(nums):
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(len(nums) - 1):
+            if nums[i] > nums[i + 1]:
+                
+                nums[i], nums[i + 1] = nums[i + 1], nums[i]
+                
+                swapped = True
+                
+        if not swapped:
+            return nums
+num1 = input('Nhap so tuy y:\n').strip()
+nums = [int(item) for item in num1.split(',')]
+print(func1(nums))
